@@ -1,0 +1,22 @@
+---
+title: "LSTM Tutorial"
+format:
+  html:
+    code-fold: False
+jupyter: python3
+---
+
+
+# Introduction to LSTMs
+
+```python
+import torch
+import torch.nn as nn
+
+lstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)
+input = torch.randn(5, 3, 10)
+h0 = torch.randn(2, 3, 20)
+c0 = torch.randn(2, 3, 20)
+output, (hn, cn) = lstm(input, (h0, c0))
+output.shape
+```

@@ -1,0 +1,12 @@
+{
+  "hash": "a2cc23a6bd1e079fae806f5f21e9ea43",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Transformers\"\nformat:\n  html:\n    code-fold: False\njupyter: python3\n---\n\n\n# Understanding Transformers\n\nTransformers revolutionized natural language processing. This tutorial explores attention mechanisms and encoder-decoder structures.\n\n",
+    "supporting": [
+      "transformers_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

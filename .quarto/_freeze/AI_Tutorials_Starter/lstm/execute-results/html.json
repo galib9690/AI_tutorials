@@ -1,0 +1,12 @@
+{
+  "hash": "7079cf5d229f73cb2e56257a244865b9",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"LSTM Tutorial\"\nformat:\n  html:\n    code-fold: False\njupyter: python3\n---\n\n\n# Introduction to LSTMs\n\n```python\nimport torch\nimport torch.nn as nn\n\nlstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)\ninput = torch.randn(5, 3, 10)\nh0 = torch.randn(2, 3, 20)\nc0 = torch.randn(2, 3, 20)\noutput, (hn, cn) = lstm(input, (h0, c0))\noutput.shape\n```\n\n",
+    "supporting": [
+      "lstm_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

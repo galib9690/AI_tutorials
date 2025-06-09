@@ -1,0 +1,8 @@
+---
+title: "AI Tutorials Home"
+format: html
+---
+
+# Welcome to AI Tutorials
+
+This site is a collection of interactive, beautiful tutorials on key AI topics, written using Quarto and hosted with GitHub Pages.
