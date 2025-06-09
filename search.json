@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "transformers.html",
+    "href": "transformers.html",
+    "title": "Transformers",
+    "section": "",
+    "text": "Understanding Transformers\nTransformers revolutionized natural language processing. This tutorial explores attention mechanisms and encoder-decoder structures."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "AI Tutorials Home",
+    "section": "",
+    "text": "Welcome to AI Tutorials\nThis site is a collection of interactive, beautiful tutorials on key AI topics, written using Quarto and hosted with GitHub Pages."
+  },
+  {
+    "objectID": "lstm.html",
+    "href": "lstm.html",
+    "title": "LSTM Tutorial",
+    "section": "",
+    "text": "Introduction to LSTMs\nimport torch\nimport torch.nn as nn\n\nlstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)\ninput = torch.randn(5, 3, 10)\nh0 = torch.randn(2, 3, 20)\nc0 = torch.randn(2, 3, 20)\noutput, (hn, cn) = lstm(input, (h0, c0))\noutput.shape"
+  }
+]
