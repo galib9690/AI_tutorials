@@ -10,5 +10,20 @@
   },
   "AI_Tutorials_Starter/transformers.qmd": {
     "transformers.html": "7bf4bc31"
+  },
+  "lstm.qmd": {
+    "lstm.html": "63d6ddaf"
+  },
+  "transformers.qmd": {
+    "transformers.html": "4e1e1b88"
+  },
+  "rnn.qmd": {
+    "rnn.html": "691ef2eb"
+  },
+  "transformer.qmd": {
+    "transformer.html": "36800a78"
+  },
+  "cnn.qmd": {
+    "cnn.html": "54c35136"
   }
 }

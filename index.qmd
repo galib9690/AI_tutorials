@@ -1,8 +1,24 @@
 ---
-title: "AI Tutorials Home"
-format: html
+title: "Welcome to AI Vault"
+format:
+  html:
+    code-fold: False
+jupyter: python3
 ---
 
-# Welcome to AI Tutorials
+# 🤖 AI Vault
 
-This site is a collection of interactive, beautiful tutorials on key AI topics, written using Quarto and hosted with GitHub Pages.
+Welcome to **AI Vault** — your personalized, evolving platform to explore and master the fundamentals of Artificial Intelligence. Navigate through foundational topics like:
+
+- 🧠 LSTM
+- 🔁 RNN
+- 🧮 CNN
+- ✨ Transformers
+
+Each section includes:
+- 📘 Clear explanations
+- 📊 Live code demos
+- 🧠 Visual flowcharts
+- 🎯 Interactive quizzes
+
+Let's unlock the power of AI, one concept at a time!

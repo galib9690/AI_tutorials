@@ -1,22 +1,54 @@
 ---
-title: "LSTM Tutorial"
+title: "LSTM - Long Short-Term Memory"
 format:
   html:
     code-fold: False
 jupyter: python3
 ---
 
+# 🧠 LSTM Theory
 
-# Introduction to LSTMs
+LSTMs are a type of Recurrent Neural Network capable of learning long-term dependencies. Useful in time series, NLP, and sequential tasks.
 
-```python
+---
+
+# ⚙️ Architecture Diagram
+
+```{mermaid}
+graph TD;
+    Input --> LSTMCell[LSTM Cell]
+    LSTMCell --> Output
+    LSTMCell --> Memory[Memory State]
+```
+
+---
+
+# 🧪 Interactive Demo
+
+```{python}
+import ipywidgets as widgets
 import torch
 import torch.nn as nn
 
-lstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)
-input = torch.randn(5, 3, 10)
+input_size = widgets.IntSlider(value=8, min=1, max=32, description='Input size')
+display(input_size)
+
+lstm = nn.LSTM(input_size=input_size.value, hidden_size=20, num_layers=2)
+x = torch.randn(5, 3, input_size.value)
 h0 = torch.randn(2, 3, 20)
 c0 = torch.randn(2, 3, 20)
-output, (hn, cn) = lstm(input, (h0, c0))
-output.shape
+out, _ = lstm(x, (h0, c0))
+out.shape
 ```
+
+---
+
+# 📝 Quick Quiz
+
+::: {.quiz}
+### What is the core strength of LSTMs?
+
+1. Static image classification  
+2. Learning long-term dependencies  
+3. Simple math operations  
+:::

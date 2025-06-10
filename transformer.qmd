@@ -1,0 +1,48 @@
+---
+title: "Transformer"
+format:
+  html:
+    code-fold: False
+jupyter: python3
+---
+
+# ✨ Transformer Introduction
+
+Transformers have revolutionized NLP with attention mechanisms.
+
+---
+
+# 🔍 Self-Attention Diagram
+
+```{mermaid}
+graph TD;
+    InputTokens --> Attention
+    Attention --> Encoder
+    Encoder --> Output
+```
+
+---
+
+# 🧪 Demo: Multihead Attention
+
+```{python}
+import torch
+import torch.nn as nn
+
+mha = nn.MultiheadAttention(embed_dim=16, num_heads=2, batch_first=True)
+x = torch.randn(2, 4, 16)
+attn_output, attn_weights = mha(x, x, x)
+attn_output.shape
+```
+
+---
+
+# 📝 Transformer Quiz
+
+::: {.quiz}
+### What is the key innovation in transformers?
+
+1. Convolution  
+2. Recurrence  
+3. Attention mechanism  
+:::

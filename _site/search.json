@@ -1,44 +1,52 @@
 [
   {
-    "objectID": "transformers.html",
-    "href": "transformers.html",
-    "title": "Transformers",
+    "objectID": "lstm.html",
+    "href": "lstm.html",
+    "title": "LSTM - Long Short-Term Memory",
     "section": "",
-    "text": "Understanding Transformers\nTransformers revolutionized natural language processing. This tutorial explores attention mechanisms and encoder-decoder structures."
+    "text": "🧠 LSTM Theory\nLSTMs are a type of Recurrent Neural Network capable of learning long-term dependencies. Useful in time series, NLP, and sequential tasks.\n\n\n\n⚙️ Architecture Diagram\n\n\n\n\n\ngraph TD;\n    Input --&gt; LSTMCell[LSTM Cell]\n    LSTMCell --&gt; Output\n    LSTMCell --&gt; Memory[Memory State]\n\n\n\n\n\n\n\n\n\n🧪 Interactive Demo\n\nimport ipywidgets as widgets\nimport torch\nimport torch.nn as nn\n\ninput_size = widgets.IntSlider(value=8, min=1, max=32, description='Input size')\ndisplay(input_size)\n\nlstm = nn.LSTM(input_size=input_size.value, hidden_size=20, num_layers=2)\nx = torch.randn(5, 3, input_size.value)\nh0 = torch.randn(2, 3, 20)\nc0 = torch.randn(2, 3, 20)\nout, _ = lstm(x, (h0, c0))\nout.shape\n\n\n\n\ntorch.Size([5, 3, 20])\n\n\n\n\n\n📝 Quick Quiz\n\nWhat is the core strength of LSTMs?\n\nStatic image classification\n\nLearning long-term dependencies\n\nSimple math operations",
+    "crumbs": [
+      "LSTM - Long Short-Term Memory"
+    ]
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "AI Tutorials Home",
+    "title": "Welcome to AI Vault",
     "section": "",
-    "text": "Welcome to AI Tutorials\nThis site is a collection of interactive, beautiful tutorials on key AI topics, written using Quarto and hosted with GitHub Pages."
+    "text": "🤖 AI Vault\nWelcome to AI Vault — your personalized, evolving platform to explore and master the fundamentals of Artificial Intelligence. Navigate through foundational topics like:\n\n🧠 LSTM\n🔁 RNN\n🧮 CNN\n✨ Transformers\n\nEach section includes: - 📘 Clear explanations - 📊 Live code demos - 🧠 Visual flowcharts - 🎯 Interactive quizzes\nLet’s unlock the power of AI, one concept at a time!",
+    "crumbs": [
+      "Welcome to AI Vault"
+    ]
   },
   {
-    "objectID": "lstm.html",
-    "href": "lstm.html",
-    "title": "LSTM Tutorial",
+    "objectID": "rnn.html",
+    "href": "rnn.html",
+    "title": "RNN - Recurrent Neural Network",
     "section": "",
-    "text": "Introduction to LSTMs\nimport torch\nimport torch.nn as nn\n\nlstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)\ninput = torch.randn(5, 3, 10)\nh0 = torch.randn(2, 3, 20)\nc0 = torch.randn(2, 3, 20)\noutput, (hn, cn) = lstm(input, (h0, c0))\noutput.shape"
+    "text": "🔁 RNN Basics\nRNNs are the foundation of LSTMs. They have loops in their architecture that allow information to persist.\n\n\n\n🧪 Simple RNN in PyTorch\n\nimport torch\nimport torch.nn as nn\n\nrnn = nn.RNN(input_size=10, hidden_size=20, num_layers=1)\nx = torch.randn(5, 3, 10)\nh0 = torch.randn(1, 3, 20)\nout, hn = rnn(x, h0)\nout.shape\n\ntorch.Size([5, 3, 20])\n\n\n\n\n\n📝 RNN Quiz\n\nWhat makes RNNs different from traditional neural networks?\n\nThey are deeper\n\nThey use loops to process sequences\n\nThey only work with images",
+    "crumbs": [
+      "RNN - Recurrent Neural Network"
+    ]
   },
   {
-    "objectID": "AI_Tutorials_Starter/transformers.html",
-    "href": "AI_Tutorials_Starter/transformers.html",
-    "title": "Transformers",
+    "objectID": "transformer.html",
+    "href": "transformer.html",
+    "title": "Transformer",
     "section": "",
-    "text": "Understanding Transformers\nTransformers revolutionized natural language processing. This tutorial explores attention mechanisms and encoder-decoder structures."
+    "text": "✨ Transformer Introduction\nTransformers have revolutionized NLP with attention mechanisms.\n\n\n\n🔍 Self-Attention Diagram\n\n\n\n\n\ngraph TD;\n    InputTokens --&gt; Attention\n    Attention --&gt; Encoder\n    Encoder --&gt; Output\n\n\n\n\n\n\n\n\n\n🧪 Demo: Multihead Attention\n\nimport torch\nimport torch.nn as nn\n\nmha = nn.MultiheadAttention(embed_dim=16, num_heads=2, batch_first=True)\nx = torch.randn(2, 4, 16)\nattn_output, attn_weights = mha(x, x, x)\nattn_output.shape\n\ntorch.Size([2, 4, 16])\n\n\n\n\n\n📝 Transformer Quiz\n\nWhat is the key innovation in transformers?\n\nConvolution\n\nRecurrence\n\nAttention mechanism",
+    "crumbs": [
+      "Transformer"
+    ]
   },
   {
-    "objectID": "AI_Tutorials_Starter/index.html",
-    "href": "AI_Tutorials_Starter/index.html",
-    "title": "AI Tutorials Home",
+    "objectID": "cnn.html",
+    "href": "cnn.html",
+    "title": "CNN - Convolutional Neural Network",
     "section": "",
-    "text": "Welcome to AI Tutorials\nThis site is a collection of interactive, beautiful tutorials on key AI topics, written using Quarto and hosted with GitHub Pages."
-  },
-  {
-    "objectID": "AI_Tutorials_Starter/lstm.html",
-    "href": "AI_Tutorials_Starter/lstm.html",
-    "title": "LSTM Tutorial",
-    "section": "",
-    "text": "Introduction to LSTMs\nimport torch\nimport torch.nn as nn\n\nlstm = nn.LSTM(input_size=10, hidden_size=20, num_layers=2)\ninput = torch.randn(5, 3, 10)\nh0 = torch.randn(2, 3, 20)\nc0 = torch.randn(2, 3, 20)\noutput, (hn, cn) = lstm(input, (h0, c0))\noutput.shape"
+    "text": "🧮 CNN Overview\nCNNs are powerful for image recognition and visual tasks.\n\n\n\n🧪 Simple CNN Structure\n\nimport torch\nimport torch.nn as nn\n\n# Define a sample CNN without flattening/linear yet\nconv = nn.Sequential(\n    nn.Conv2d(1, 6, 3),\n    nn.ReLU()\n)\n\n# Dummy input\nx = torch.randn(1, 1, 30, 30)\n\n# Pass through conv to get feature size\nwith torch.no_grad():\n    conv_out = conv(x)\n    num_features = conv_out.view(x.size(0), -1).shape[1]\n\n# Now build full model with correct linear input size\nmodel = nn.Sequential(\n    nn.Conv2d(1, 6, 3),\n    nn.ReLU(),\n    nn.Flatten(),\n    nn.Linear(num_features, 10)\n)\n\nout = model(x)\nprint(out.shape)\n\ntorch.Size([1, 10])\n\n\n\n\n\n📝 CNN Quiz\n\nCNNs are mostly used for?\n\nTime series\n\nImage processing\n\nLanguage translation",
+    "crumbs": [
+      "CNN - Convolutional Neural Network"
+    ]
   }
 ]

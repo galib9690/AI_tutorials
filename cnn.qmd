@@ -1,0 +1,58 @@
+---
+title: "CNN - Convolutional Neural Network"
+format:
+  html:
+    code-fold: False
+jupyter: python3
+---
+
+# 🧮 CNN Overview
+
+CNNs are powerful for image recognition and visual tasks.
+
+---
+
+# 🧪 Simple CNN Structure
+
+```{python}
+import torch
+import torch.nn as nn
+
+# Define a sample CNN without flattening/linear yet
+conv = nn.Sequential(
+    nn.Conv2d(1, 6, 3),
+    nn.ReLU()
+)
+
+# Dummy input
+x = torch.randn(1, 1, 30, 30)
+
+# Pass through conv to get feature size
+with torch.no_grad():
+    conv_out = conv(x)
+    num_features = conv_out.view(x.size(0), -1).shape[1]
+
+# Now build full model with correct linear input size
+model = nn.Sequential(
+    nn.Conv2d(1, 6, 3),
+    nn.ReLU(),
+    nn.Flatten(),
+    nn.Linear(num_features, 10)
+)
+
+out = model(x)
+print(out.shape)
+
+```
+
+---
+
+# 📝 CNN Quiz
+
+::: {.quiz}
+### CNNs are mostly used for?
+
+1. Time series  
+2. Image processing  
+3. Language translation  
+:::

@@ -1,0 +1,38 @@
+---
+title: "RNN - Recurrent Neural Network"
+format:
+  html:
+    code-fold: False
+jupyter: python3
+---
+
+# 🔁 RNN Basics
+
+RNNs are the foundation of LSTMs. They have loops in their architecture that allow information to persist.
+
+---
+
+# 🧪 Simple RNN in PyTorch
+
+```{python}
+import torch
+import torch.nn as nn
+
+rnn = nn.RNN(input_size=10, hidden_size=20, num_layers=1)
+x = torch.randn(5, 3, 10)
+h0 = torch.randn(1, 3, 20)
+out, hn = rnn(x, h0)
+out.shape
+```
+
+---
+
+# 📝 RNN Quiz
+
+::: {.quiz}
+### What makes RNNs different from traditional neural networks?
+
+1. They are deeper  
+2. They use loops to process sequences  
+3. They only work with images  
+:::
